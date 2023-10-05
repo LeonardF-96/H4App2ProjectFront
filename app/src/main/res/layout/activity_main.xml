@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="#ddff77"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:text="LeosWebApp"
+        android:textColor="@color/white"
+        android:background="#6200ed"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="45sp"
+        android:gravity="center_horizontal"
+        android:text="Persons!"
+        android:background="#99ffff"
+        android:textSize="25sp"/>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lstPersons"/>
+
+</LinearLayout>

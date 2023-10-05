@@ -1,6 +1,9 @@
 package com.example.appapitest;
 
-public class Person
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Person implements Parcelable
 {
     int id;
     String name;
@@ -25,6 +28,52 @@ public class Person
         this.favorite = favorite;
         this.hairId = hairId;
         this.programLanguageId = programLanguageId;
+    }
+
+    //Parcelable constructor - for sending a Person object with Intent
+    protected Person(Parcel in)
+    {
+        id = in.readInt();
+        name = in.readString();
+        phone = in.readInt();
+        address = in.readString();
+        note = in.readString();
+        favorite = in.readByte() != 0;
+        hairId = in.readInt();
+        programLanguageId = in.readInt();
+        hairColor = in.readString();
+        programmingLanguage = in.readString();
+    }
+    //Creator for Parcelable
+    public static final Creator<Person> CREATOR = new Creator<Person>() {
+        @Override
+        public Person createFromParcel(Parcel in) {
+            return new Person(in);
+        }
+        @Override
+        public Person[] newArray(int size) {
+            return new Person[size];
+        }
+    };
+    //Implement Parcelable methods
+    @Override
+    public int describeContents()
+    {
+        return 0;
+    }
+    @Override
+    public void writeToParcel(Parcel dest, int flags)
+    {
+        dest.writeInt(id);
+        dest.writeString(name);
+        dest.writeInt(phone);
+        dest.writeString(address);
+        dest.writeString(note);
+        dest.writeByte((byte) (favorite ? 1 : 0));
+        dest.writeInt(hairId);
+        dest.writeInt(programLanguageId);
+        dest.writeString(hairColor);
+        dest.writeString(programmingLanguage);
     }
 
     public int getId() {

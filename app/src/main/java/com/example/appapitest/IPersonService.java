@@ -17,7 +17,7 @@ public interface IPersonService
     Call<Person> getPersonById(@Path("Id")int id);
 
     @POST("Person")
-    Call<Void> addPerson(@Body Person person);
+    Call<Void> createNewPerson(@Body Person person);
 
     //@PUT("Frugt/{id}")
 }

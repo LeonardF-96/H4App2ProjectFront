@@ -1,31 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
-    android:background="#ddff77"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="40sp"
-        android:text="LeosWebApp"
-        android:textColor="@color/white"
-        android:background="#6200ed"/>
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/fabCreateNew"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="end"-->
+<!--        android:src="@drawable/ic_plus1"-->
+<!--        tools:ignore="MissingConstraints" />-->
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="45sp"
+        android:layout_height="match_parent"
         android:gravity="center_horizontal"
-        android:text="Persons!"
-        android:background="#99ffff"
-        android:textSize="25sp"/>
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/lstPersons"/>
+        android:orientation="vertical"
+        android:background="#ddff77"
+        tools:context=".MainActivity">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:text="LeosWebApp"
+            android:textColor="@color/white"
+            android:background="#6200ed"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45sp"
+            android:gravity="center_horizontal"
+            android:text="Persons!"
+            android:background="#99ffff"
+            android:textSize="25sp"/>
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="600sp"
+            android:id="@+id/lstPersons"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ADD NEW PERSON"
+            android:id="@+id/btnAdd"
+            android:onClick="onClickAdd"/>
+    </LinearLayout>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

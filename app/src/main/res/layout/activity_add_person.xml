@@ -82,21 +82,25 @@
                 android:layout_width="300sp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
+                android:textSize="15dp"
                 android:id="@+id/txtNameAdd"/>
             <EditText
                 android:layout_width="300sp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
+                android:textSize="15dp"
                 android:id="@+id/txtPhoneAdd"/>
             <EditText
                 android:layout_width="300sp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="15dp"
+                android:textSize="15dp"
                 android:id="@+id/txtAddressAdd"/>
             <EditText
                 android:layout_width="300sp"
                 android:layout_height="80dp"
                 android:layout_marginBottom="15dp"
+                android:textSize="15dp"
                 android:id="@+id/txtNoteAdd"/>
             <CheckBox
                 android:layout_width="wrap_content"

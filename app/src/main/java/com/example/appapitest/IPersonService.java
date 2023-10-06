@@ -2,6 +2,7 @@ package com.example.appapitest;
 
 import java.util.List;
 
+import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
@@ -18,6 +19,9 @@ public interface IPersonService
 
     @POST("Person")
     Call<Void> createNewPerson(@Body Person person);
+
+    @POST("createPersonJson")
+    Call<Integer> createNewPersonJson(@Body RequestBody requestBody);
 
     //@PUT("Frugt/{id}")
 }

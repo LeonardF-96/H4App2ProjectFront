@@ -5,6 +5,7 @@ import java.util.List;
 import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.DELETE;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
@@ -23,5 +24,12 @@ public interface IPersonService
     @POST("createPersonJson")
     Call<Integer> createNewPersonJson(@Body RequestBody requestBody);
 
-    //@PUT("Frugt/{id}")
+//    @PUT("Person/{Id}")
+//    Call<Void> updatePersonJSON(@Body RequestBody requestBody);
+
+    @PUT("Person/{Id}")
+    Call<Void> updatePerson(@Path("Id") int id, @Body Person person);
+
+    @DELETE("Person/{Id}")
+    Call<Void> deletePerson(@Path("Id") int id);
 }

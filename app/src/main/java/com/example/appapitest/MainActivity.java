@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity
                     PersonAdapter adapter = new PersonAdapter(MainActivity.this, persons);
                     lstPersons.setAdapter(adapter);
                     adapter.notifyDataSetChanged();
+                    //adapter.updateData(persons);
                 }
                 else
                 {

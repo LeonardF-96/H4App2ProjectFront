@@ -16,9 +16,7 @@ public class Person implements Parcelable
     String hairColor;
     String programmingLanguage;
 
-    public Person() {}
-
-    public Person(int id, String name, int phone, String address, String note, Boolean favorite, int hairId, int programLanguageId, String hairColor, String programmingLanguage) {
+    public Person(int id, String name, int phone, String address, String note, Boolean favorite, int hairId, int programLanguageId) {
         super();
         this.id = id;
         this.name = name;

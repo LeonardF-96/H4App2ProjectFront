@@ -24,6 +24,13 @@ public class PersonAdapter extends BaseAdapter
         Log.d("PersonAdapter", "Number of persons in the list: " + list.size());
     }
 
+//    public void updateData(List<Person> newPersonList)
+//    {
+//        this.personList.clear();
+//        this.personList.addAll(newPersonList);
+//        notifyDataSetChanged();
+//    }
+
     @Override
     public int getCount() {
         return this.personList.size();
